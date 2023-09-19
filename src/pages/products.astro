@@ -1,0 +1,26 @@
+---
+import ProductCard, { type Product } from '../components/ProductCard.astro';
+import loadProducts from '../lib/api.ts';
+const products = await loadProducts();
+---
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Strapi & Astro</title>
+  </head>
+
+  <body>
+    <main>
+      <ul>
+        {
+          products.map((product) => (
+          <ProductCard product={product} />
+          ))
+        }
+      </ul>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+---
+
+export interface Product {
+    image: string;
+    title: string;
+    description: string;
+    price: number;
+    created_at: string;
+}
+
+interface Props {
+	product: Product;
+}
+
+const { product } = Astro.props;
+---
+
+<article class="product-card">
+  <img src={product?.image} alt="Imagen del producto">
+  <h2>{product?.title}</h2>
+  <p>{product?.description}</p>
+  <p>Precio: ${product?.price}</p>
+  <p>Creado el: {product?.created_at}</p>
+</article>

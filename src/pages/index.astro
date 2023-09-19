@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import ProductsPage from '../pages/products.astro';
 ---
 
 <Layout title="MSLP">
@@ -22,10 +23,12 @@ import Card from '../components/Card.astro';
 				body="Que fluya la creatividad. Síguenos en Instagram."
 			/>
 			<Card
-				href="."
-				title="Camisetas"
-				body="Próximamente ❤️"
+			href="/products"
+			title="Camisetas"
+			body="Próximamente ❤️"
 			/>
+			<ProductsPage />
+
 		</ul>
 	</main>
 </Layout>
