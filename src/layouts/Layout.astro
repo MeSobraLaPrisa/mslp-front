@@ -14,7 +14,16 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/MSLP_logo.png" />
 		<meta name="generator" content={Astro.generator} />
-		<script defer event-uuid="8beb8d0e-dce3-4d09-945a-f7757f44cc9c" src="https://tracker.metricswave.com/js/visits.js"></script>
+		<!-- <script defer event-uuid="8beb8d0e-dce3-4d09-945a-f7757f44cc9c" src="https://tracker.metricswave.com/js/visits.js"></script>
+		 -->
+		 <script defer type="text/partytown" event-uuid="8beb8d0e-dce3-4d09-945a-f7757f44cc9c" src="https://tracker.metricswave.com/js/visits.js"></script>
+<script defer type="text/partytown">
+  window.trackMetrics = function () {
+    // Aquí puedes agregar cualquier lógica adicional que desees para el seguimiento de métricas.
+    // Por ejemplo, puedes enviar eventos personalizados a través de esta función.
+  }
+</script>
+
 		<title>{title}</title>
 	</head>
 	<body>
