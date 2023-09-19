@@ -11,7 +11,8 @@ export default async function loadProducts(): Promise<Product[]> {
   } else if (data.products && Array.isArray(data.products)) {
     return data.products; // Si la respuesta tiene una propiedad 'products' que es un array, devuélvelo
   } else {
-    throw new Error("La respuesta no contiene un array de productos.");
+    console.log("La respuesta no contiene un array de productos.");
+    return []; // Si no, devuelve un array vacío
   }
 }
 
